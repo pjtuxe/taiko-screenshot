@@ -1,10 +1,10 @@
 const _config = require("./config")
 const _utils = require("./utils")
 const config = _config.getConfig()
-const { openBrowser, goto, screenshot, closeBrowser } = require("taiko");
+const { openBrowser, goto, screenshot, waitFor, closeBrowser } = require("taiko");
 
 // Validate the given configuration against static rules
-const { url, name, fullPage, encoding } = _config.validateConfig(config)
+const { url, name, fullPage, encoding, wait } = _config.validateConfig(config)
 
 // Init the application
 _utils.createTempPath()
@@ -17,6 +17,11 @@ var loop = true;
     await openBrowser({ headless: true, args: ["--no-sandbox"] })
     // Navigate to the site
     await goto(url)
+
+    if (wait) {
+      await waitFor(wait)
+    }
+
     // Take the screenshot
     await screenshot({ path: _utils.getTempPath(name), fullPage, encoding })
     // Close the virtual browser

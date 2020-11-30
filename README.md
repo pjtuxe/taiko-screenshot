@@ -85,9 +85,10 @@ Let’s break this command down into more details and examine exactly what is ne
 
 The application can be easily configured with the help of some environment variables, which are described below:
 
-| Name          | Value          | Required | Default        | Description                                                                    |
-|---------------|----------------|----------|----------------|--------------------------------------------------------------------------------|
-| TSS_URL       | String         | Yes      | -              | URL of the page to be saved                                                    |
-| TSS_NAME      | String         | No       | screenshot.png | To save screenshots to a custom location you can use this environment variable |
-| TSS_FULL_PAGE | Boolean        | No       | true           | You can use the fullPage option to take a screenshot of the entire page        |
-| TSS_ENCODING  | Enum("base64") | No       | null           | Taiko's screenshot API can also return images in base64 encoding format        |
+| Name          | Value          | Required | Default        | Description                                                                                         |
+|---------------|----------------|----------|----------------|-----------------------------------------------------------------------------------------------------|
+| TSS_URL       | String         | Yes      | -              | URL of the page to be saved                                                                         |
+| TSS_NAME      | String         | No       | screenshot.png | To save screenshots to a custom location you can use this environment variable                      |
+| TSS_FULL_PAGE | Boolean        | No       | true           | You can use the fullPage option to take a screenshot of the entire page                             |
+| TSS_ENCODING  | Enum("base64") | No       | null           | Taiko's screenshot API can also return images in base64 encoding format                             |
+| TSS_WAIT      | Number         | No       | null           | The main thread will wait that many milliseconds between loading the page and taking the screenshot |

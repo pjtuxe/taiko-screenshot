@@ -8,6 +8,7 @@ exports.getConfig = () => {
     name: env.TSS_NAME || "screenshot.png",
     fullPage: env.TSS_FULL_PAGE !== undefined ? !!env.TSS_FULL_PAGE : true,
     encoding: env.TSS_ENCODING !== undefined ? env.TSS_ENCODING : null,
+    wait: env.TSS_WAIT !== undefined ? parseFloat(env.TSS_WAIT) : null,
   }
 }
 

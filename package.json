@@ -1,6 +1,6 @@
 {
   "name": "taiko-screenshot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Taiko Screenshot is a dead-simple wrapper application that allows you to take a screenshot of any website. The program is basically based on Taiko, this application is a Docker shortcut around the library.",
   "main": "src/index.js",
   "scripts": {

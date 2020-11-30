@@ -4,7 +4,7 @@
   "description": "Taiko Screenshot is a dead-simple wrapper application that allows you to take a screenshot of any website. The program is basically based on Taiko, this application is a Docker shortcut around the library.",
   "main": "src/index.js",
   "scripts": {
-    "docker:build": "docker build -t pjtuxe/taiko-screenshot .",
+    "docker:build": "docker build --no-cache -t pjtuxe/taiko-screenshot .",
     "docker:push": "docker push pjtuxe/taiko-screenshot"
   },
   "repository": {

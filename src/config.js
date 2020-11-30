@@ -5,7 +5,7 @@ exports.getConfig = () => {
   const env = process.env
   return {
     url: env.TSS_URL,
-    path: env.TSS_PATH || "screenshot.png",
+    name: env.TSS_NAME || "screenshot.png",
     fullPage: env.TSS_FULL_PAGE !== undefined ? !!env.TSS_FULL_PAGE : true,
     encoding: env.TSS_ENCODING !== undefined ? env.TSS_ENCODING : null,
   }

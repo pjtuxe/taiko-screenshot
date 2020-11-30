@@ -19,6 +19,7 @@
   "homepage": "https://github.com/pjtuxe/taiko-screenshot#readme",
   "dependencies": {
     "deasync": "^0.1.21",
+    "fs": "0.0.1-security",
     "taiko": "^1.0.28"
   }
 }
